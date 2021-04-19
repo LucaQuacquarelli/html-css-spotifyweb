@@ -6,12 +6,20 @@
     color: white;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .wrapper {
     display: flex;
 }
 
 aside {
-    width: 300px;
+    width: 200px;
     height: calc(100vh - 70px);
     background-color: black;
 }
@@ -26,9 +34,146 @@ aside {
     height: 32px;
 }
 
+.nav-list {
+    padding: 5px;
+    font-size: 12px;
+}
+
+.nav-list li {
+    margin: 10px 0;
+    padding-left: 15px;
+}
+
+.nav-list li:hover {
+    padding-left: 12px;
+    border-left: 3px solid #9ce72a;
+}
+
+/* .nav-list li:active {
+    border-left: 3px solid #9ce72a;
+}
+
+.nav-list li:focus {
+    border-left: 3px solid #9ce72a;
+} */
+
+.nav-list span {
+    margin-left: 5px;
+    color: #6b6b6b;
+    transition: 0.3s;
+}
+
+.nav-list li:hover span {
+    color: white;
+}
+
+.nav-list a,
+.nav-list img {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list img {
+    width: 15%;
+}
+
+.playlist {
+    padding: 20px;
+}
+
+.playlist > h5 {
+    text-transform: uppercase;
+}
+
+.playlist > .new-playlist {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.playlist .new-playlist > i {
+    padding: 10px;
+    background-color: #6b6b6b;
+    color: black;
+    transition: 0.3s;
+}
+
+.playlist .new-playlist > span {
+    margin-left: 5px;
+    font-size: 13px;
+    color: #6b6b6b;
+    transition: 0.3s;
+}
+
+.playlist .new-playlist:hover i {
+    background-color: white;
+}
+
+.playlist .new-playlist:hover span {
+    color: white;
+}
+
+.playlist .playlist-list li {
+    margin: 10px 0;
+    font-size: 12px;
+    color: #6b6b6b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.playlist .playlist-list li:hover {
+    color: white;
+}
+
+.nav-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.download-container {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #6b6b6b;
+}
+
+.download-container > img {
+    height: 10px;
+}
+
+.download-container > span {
+    margin-left: 5px;
+    font-size: 10px;
+    color: #6b6b6b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.download-container > span:hover {
+    color: white;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.user-container > img {
+    width: 12%;
+    padding: 1px 2px;
+    background-color: #6b6b6b;
+    border-radius: 50%;
+}
+
+.user-container > h6 {
+    margin-left: 5px;
+}
+
 main {
     position: relative;
-    width: 100%;
+    width: calc(100% - 200px);
     height: calc(100vh - 70px);
     padding-top: 80px;
     background-color: #141922;
@@ -37,10 +182,11 @@ main {
 
 .upgrade {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: calc(100% - 200px);
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 1;
@@ -53,7 +199,7 @@ main {
     background-color: transparent;
     text-transform: uppercase;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 .upgrade > button:hover {
