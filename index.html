@@ -15,38 +15,42 @@
         <div class="wrapper">
             <aside>
                 <div class="logo-container">
-                    <img src="img/logo.svg" alt="Spotify logo">
+                    <img src="img/logo.svg" alt="Spotify logo" id="logo-big">
+                    <img src="img/logo-small.svg" alt="Spotify logo" id="logo-small">
                 </div>
-                <div class="nav-list">
-                    <ul>
-                        <li>
-                            <a href="#up"><img src="img/home.svg" alt="home icon"> <span>Home</span></a>
-                        </li>
-                        <li>
-                            <a href=""><img src="img/search.svg" alt="search icon"> <span>Cerca</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="img/libreria.svg" alt="library icon"> <span>La tua libreria</span></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="playlist">
-                    <h5>playlist</h5>
-                    <div class="new-playlist">
-                        <i class="fas fa-plus"></i>
-                        <span>Crea Playlist</span>
-                    </div>
-                    <div class="playlist-list">
+                <div class="flex-container">
+                    <div class="nav-list">
                         <ul>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
+                            <li>
+                                <a href="#up"><img src="img/home.svg" alt="home icon"> <span>Home</span></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="img/search.svg" alt="search icon"> <span>Cerca</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/libreria.svg" alt="library icon"> <span>La tua libreria</span></a>
+                            </li>
                         </ul>
                     </div>
-                </div>
-                <div class="nav-end">
-                    <div class="nav-end-wrapper">
+                    <div class="playlist">
+                        <h5>playlist</h5>
+                        <div class="new-playlist">
+                            <i class="fas fa-plus"></i>
+                            <span>Crea Playlist</span>
+                        </div>
+                        <div class="playlist-list">
+                            <ul>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-end">
                         <div class="download-container">
                             <img src="img/download.svg" alt="download icon">
                             <span>Installa app</span>
@@ -66,6 +70,54 @@
                 </div>
             </main>
         </div>
-        <section class="player"></section>
+        <section class="player">
+            <div class="player-flex">
+                <div class="song-container">
+                    <img src="img/sinister.jpeg" alt="song cover">
+                    <div class="song-title">
+                        <h6>Sinister</h6>
+                        <p>Brano Nome</p>
+                    </div>
+                    <div class="hearts-container">
+                        <i class="far fa-heart heart">
+                            <i class="fas fa-heart add"></i>
+                        </i>
+                    </div>
+                    <div class="folder-container">
+                        <i class="far fa-folder close">
+                            <i class="far fa-folder-open open"></i>
+                        </i>
+                    </div>
+                </div>
+                <div class="song-player"> 
+                    <div class="buttons-container">
+                        <i class="fas fa-random"></i>
+                        <i class="fas fa-step-backward"></i>
+                        <i class="far fa-play-circle"></i>
+                        <i class="fas fa-step-forward"></i>
+                        <i class="fas fa-redo-alt"></i>
+                    </div>
+                    <div class="slider-container">
+                        <span>1.14</span>
+                        <div class="slider">
+                            <div class="slide">
+                                <div class="slide-circle"></div>
+                            </div>
+                        </div>
+                        <span>4.55</span>
+                    </div>
+                </div>
+                <div class="mirror-container">
+                    <i class="fas fa-list-ul"></i>
+                    <i class="fas fa-desktop"></i>
+                    <i class="fas fa-volume-up"></i>
+                    <div class="slider">
+                        <div class="slide">
+                            <div class="slide-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
