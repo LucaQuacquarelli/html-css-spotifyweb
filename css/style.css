@@ -504,7 +504,6 @@ main {
         padding: 0px;
     }
     
-
     .nav-list a,
     .download-container,
     .user-container {
@@ -538,6 +537,18 @@ main {
         width: calc(100% - 50px);
     }
 
+    .section-content .album-cover {
+        width: 100px;
+    }
+
+    .section-content .album-title > h5 {
+        font-size: 9px;
+    }
+
+    .section-content .album-title > p {
+        font-size: 7px;
+    }
+
     .song-player {
         display: flex;
         justify-content: center;
@@ -562,8 +573,12 @@ main {
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1141px) {
   
+    .main-menu ul,
+    .main-container .recently .section-content {
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-height: 570px) {
