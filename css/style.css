@@ -1,3 +1,4 @@
+/* common */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,6 +19,59 @@ a {
     display: flex;
 }
 
+/* slider */
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.slider-container > span {
+    font-size: 12px;
+}
+
+.slider {
+    width: 100%;
+    height: 5px;
+    margin: 0 8px;
+    border-radius: 10px;
+    background-color: #5a5a5a;
+    cursor: pointer;
+}
+
+.slider:hover .slide {
+    background-color: white;
+}
+
+.slider:hover .slide > .slide-circle {
+    visibility: visible;
+}
+
+.slide {
+    position: relative;
+    width: 30%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #c1c1c1;
+    transition: 0.3s;
+}
+
+.slide-circle {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: #c1c1c1;
+    visibility: hidden;
+}
+/* slider */
+/* /common */
+
+/* aside */
 aside {
     position: relative;
     width: 200px;
@@ -183,6 +237,7 @@ aside {
     margin-left: 5px;
 }
 
+/* main */
 main {
     position: relative;
     width: calc(100% - 200px);
@@ -218,6 +273,104 @@ main {
     transform: scale(1.1);
 }
 
+.main-menu {
+    padding: 10px 0;
+}
+
+.main-menu ul {
+    display: flex;
+    justify-content: center;
+}
+
+.main-menu li {
+    margin: 0 5px;
+    transition: 0.1s;
+}
+
+.main-menu li > hr {
+    width: 30%;
+    margin: 5px auto;
+    border: 1px solid #1db954;
+    visibility: hidden;
+}
+
+.main-menu li:hover hr {
+    visibility: visible;
+}
+
+.main-menu a {
+    color: #6b6b6b;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.main-menu li:hover a{
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+.section-title {
+    padding: 20px 0;
+}
+
+.section-content {
+    display: flex;
+}
+
+.section-content .album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-content .album-title {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.section-content .album-title > p {
+    padding: 5px 0;
+    font-size: 11px;
+    color: #6b6b6b;
+}
+
+.section-content .album-cover {
+    width: 150px;
+}
+
+.section-content .album-cover > img {
+    width: 100%;
+}
+
+.recently .section-content {
+    justify-content: space-between;
+}
+
+.for-you .section-content > .second, 
+.most-popular .section-content > .second {
+   margin-left: 10px;
+}
+
+.most-popular .section-title > p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #6b6b6b;
+}
+
+.most-popular .section-content .album-cover {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* /main */
+
+/* section player */
 .player {
     padding: 10px;
     background-color: #282828;
@@ -308,55 +461,6 @@ main {
     transform: scale(1.2);
 }
 
-.slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5px;
-}
-
-.slider-container > span {
-    font-size: 12px;
-}
-
-.slider {
-    width: 100%;
-    height: 5px;
-    margin: 0 8px;
-    border-radius: 10px;
-    background-color: #5a5a5a;
-    cursor: pointer;
-}
-
-.slider:hover .slide {
-    background-color: white;
-}
-
-.slider:hover .slide > .slide-circle {
-    visibility: visible;
-}
-
-.slide {
-    position: relative;
-    width: 30%;
-    height: 5px;
-    border-radius: 10px;
-    background-color: #c1c1c1;
-    transition: 0.3s;
-}
-
-.slide-circle {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 10px;
-    height: 10px;
-    border: 2px solid white;
-    border-radius: 50%;
-    background-color: #c1c1c1;
-    visibility: hidden;
-}
-
 .mirror-container {
     display: flex;
     align-items: center;
@@ -365,13 +469,15 @@ main {
 
 .mirror-container > i {
     margin: 0 8px;
+    cursor: pointer;
 }
 
 .mirror-container > i:hover {
     color: #1db954;
 }
+/* /section player */
 
-
+/* media */
 @media screen and (max-width: 767px) {
     
     aside {
@@ -454,6 +560,10 @@ main {
     .mirror-container > i.fa-desktop {
         padding: 5px 0;
     }
+}
+
+@media screen and (max-width: 991px) {
+  
 }
 
 @media screen and (max-height: 570px) {
