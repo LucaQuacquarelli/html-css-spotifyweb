@@ -1,3 +1,25 @@
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+   background: #555; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1db954; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1db954ab; 
+}
+/* /scrollbar */
+
 /* common */
 * {
     box-sizing: border-box;
@@ -69,6 +91,66 @@ a {
     visibility: hidden;
 }
 /* slider */
+
+/* album */
+.section-title {
+    padding: 20px;
+}
+
+.section-content {
+    display: flex;
+}
+
+.section-content .album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.section-content .album-cover {
+    position: relative;
+    width: 150px;
+    cursor: pointer;
+}
+
+.section-content .album-cover:hover .hover-album {
+    display: block;
+}
+
+.hover-album {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.hover-album > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+}
+
+.section-content .album-cover > img {
+    width: 100%;
+}
+
+.section-content .album-title {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.section-content .album-title > p {
+    padding: 5px 0;
+    font-size: 11px;
+    color: #6b6b6b;
+}
+/* /album */
 /* /common */
 
 /* aside */
@@ -113,14 +195,6 @@ aside {
     padding-left: 12px;
     border-left: 3px solid #1db954;
 }
-
-/* .nav-list li:active {
-    border-left: 3px solid #9ce72a;
-}
-
-.nav-list li:focus {
-    border-left: 3px solid #9ce72a;
-} */
 
 .nav-list span {
     margin-left: 5px;
@@ -312,49 +386,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0 20px;
-}
-
-.section-title {
-    padding: 20px 0;
-}
-
-.section-content {
-    display: flex;
-}
-
-.section-content .album {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.section-content .album-title {
-    margin: 10px 0;
-    text-align: center;
-}
-
-.section-content .album-title > p {
-    padding: 5px 0;
-    font-size: 11px;
-    color: #6b6b6b;
-}
-
-.section-content .album-cover {
-    width: 150px;
-}
-
-.section-content .album-cover > img {
-    width: 100%;
-}
-
-.recently .section-content {
-    justify-content: space-between;
-}
-
-.for-you .section-content > .second, 
-.most-popular .section-content > .second {
-   margin-left: 10px;
 }
 
 .most-popular .section-title > p {
@@ -367,13 +398,17 @@ main {
     border-radius: 50%;
     overflow: hidden;
 }
-
 /* /main */
 
 /* section player */
 .player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
     padding: 10px;
     background-color: #282828;
+    z-index: 2;
 }
 
 .player .player-flex {
@@ -573,7 +608,7 @@ main {
     }
 }
 
-@media screen and (max-width: 1141px) {
+@media screen and (max-width: 1201px) {
   
     .main-menu ul,
     .main-container .recently .section-content {
