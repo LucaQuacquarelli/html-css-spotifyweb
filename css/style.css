@@ -111,6 +111,7 @@ a {
 .section-content .album-cover {
     position: relative;
     width: 150px;
+    height: 150px;
     cursor: pointer;
 }
 
@@ -574,6 +575,7 @@ main {
 
     .section-content .album-cover {
         width: 100px;
+        height: 100px;
     }
 
     .section-content .album-title > h5 {
@@ -608,7 +610,7 @@ main {
     }
 }
 
-@media screen and (max-width: 1201px) {
+@media screen and (max-width: 1227px) {
   
     .main-menu ul,
     .main-container .recently .section-content {
